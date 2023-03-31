@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  padding: 0;
+  margin: 0;
+  background: black;
+  color: white;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+.leaflet-div-icon {
+  background: none !important;
+  border: none !important;
+} 
+
+.leaflet-control-zoom {
+  border-radius: 0px !important;
+  box-shadow: 0 0 1px #fff !important;
+  border: none !important;
+}
+
+.leaflet-control-zoom a { 
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.1) !important;
+  color: #2e291d !important;
+  border-bottom-color: rgba(255, 255, 255, 0.3)  !important
+}
+
+.leaflet-control-attribution {
+  display: none;
+}
+
+.grayscale-tilelayer {
+  filter: sepia(100%) grayscale(70%) brightness(40%) contrast(100%)
+}
+
+
+.leaflet-popup-content-wrapper {
+  border-radius: 2px !important;
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.4) !important;
+  padding: 5px 20px 5px 10px !important;
+}
+
+.leaflet-popup-content-wrapper p {
+  margin: 0 !important;
+}
+
+.leaflet-popup-content {
+  min-width: min-content;
+}
+
+.leaflet-popup-tip {
+  background: rgba(255, 255, 255, 0.4) !important;
+  backdrop-filter: blur(1px);
+}
