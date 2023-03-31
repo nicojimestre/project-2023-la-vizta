@@ -23,8 +23,10 @@ Please, fill the following sections about your project.
 >
 > Hint: some good pointers for finding quality publicly available datasets ([Google dataset search](https://datasetsearch.research.google.com/), [Kaggle](https://www.kaggle.com/datasets), [OpenSwissData](https://opendata.swiss/en/), [SNAP](https://snap.stanford.edu/data/) and [FiveThirtyEight](https://data.fivethirtyeight.com/)), you could use also the DataSets proposed by the ENAC (see the Announcements section on Zulip).
 
-We will use the [Spotify Charts](https://www.kaggle.com/datasets/dhruvildave/spotify-charts?resource=download) dataset along with the [Shazam API](https://rapidapi.com/apidojo/api/shazam) for this project. 
-Spotify Charts is a dataset containing all the "Top200" and "Viral50" categories published by spotify and available on their app as a playlist. The Shazam API is also a great resource to query data about tracks, albums or artists and we will use it as a complement to the spotify data. 
+We will use 3 sources of data for this project, they are listed below:
+1. [Spotify Charts](https://www.kaggle.com/datasets/dhruvildave/spotify-charts?resource=download) containing all the "Top200" and "Viral50" categories published by spotify and available on their app as playlists.
+2. [Shazam API](https://rapidapi.com/apidojo/api/shazam) which is also a great resource to query data about tracks, albums or artists and we will use it as a complement to the spotify data.
+3. [OpenStreetMap](https://www.openstreetmap.org/#map=9/46.8246/8.2245) dataset containing geometries of countries, and much more (which we will not use in our case). 
 
 ### Problematic
 
@@ -37,22 +39,28 @@ The main topics we want to address are the following:
 - Discover new titles
 - Analyse the music trends over time 
 
-• Think of an overview for the project, your motivation, and the target audience:
-The website will consist of a map with colors related to genre and popups to show tracks and genres that have been the most streamed per country. 
-
 All of us are passionate about music, we have been using Spotify, Souncloud, Shazam and others for years now. We enjoy discovering new songs frequently and share our passion. 
 Nevertheless, finding new musics or artists is difficult and the recommendations algorithm used by the apps enumerated earlier are still far from perfect. Moreover, these algorithms tend to 
 always recommend what we "want" to hear - similar titles as the ones that are already in our playlists. This is were our project comes to life: building an app - a tool - that will allow anyone to discover new genres and new artists in a visual and entertaining manner. 
 
 More concretely, we would like to display a map of the world. Data could be shown as shapes, popups, graphs, colors as well as text. 
 # EDOU -> MORE ON THIS
+.... The website will consist of a map with colors related to genre and popups to show tracks and genres that have been the most streamed per country. 
 
 ### Exploratory Data Analysis
 
 > Pre-processing of the data set you chose
 > - Show some basic statistics and get insights about the data
 
-These categories are refreshed every 2-3 days and data has been since 2017 summing up to 
+###### Spotify Charts
+"Top200" and "Viral50" charts are refreshed every 2-3 days and data has been collected since 2017 summing it up to around 2.3GB of data. 
+
+Each row contains: (title, rank, date, artists, url, region, chart, trend, streams)
+The “chart” column is for the ‘top200’ (=200 most streamed song) and ‘viral50’ (=TODO)
+Our focus will mostly be on the region (=country) and streams.
+Number of rows in the dataset: XX
+Number of countries represented: 69 + “global” (world)
+
 
 ### Related work
 
