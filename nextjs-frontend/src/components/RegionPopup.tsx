@@ -20,7 +20,7 @@ const rankColors = [
     '#9A9A9A'
 ]
 
-interface IRegionPop {
+interface IRegionPopup {
     region: Region,
     topGenres: GenreName[]
     tracks: Track[]
