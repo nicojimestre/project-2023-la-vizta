@@ -2,7 +2,9 @@ import { GetServerSideProps } from "next";
 import { getSession } from "next-auth/react";
 import { isAuthenticated, MySession } from "~/session";
 import spotify from "../api/spotify";
-import DynamicMap from '../../components/DynamicMap';
+
+import Navbar from '~/components/Navbar';
+import DynamicMap from '~/components/DynamicMap';
 
 
 // export const getServerSideProps: GetServerSideProps = async (ctx) => {
@@ -24,5 +26,7 @@ import DynamicMap from '../../components/DynamicMap';
 // }
 
 export default function foo() {
-	return <DynamicMap />
+	return (
+		<DynamicMap />
+	)
 }

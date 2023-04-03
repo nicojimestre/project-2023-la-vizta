@@ -3,6 +3,9 @@ import { MapContainer, TileLayer, GeoJSON } from "react-leaflet";
 import L from 'leaflet'
 
 import RegionPopup from './RegionPopup'
+import Navbar from './Navbar';
+import useFetch from '~/hooks/useFetch';
+
 import { Track, GenreName, Color, RegionGeometry, Region } from '~/types';
 
 import 'leaflet/dist/leaflet.css';
@@ -49,36 +52,14 @@ const palette: {[genre: GenreName]: Color} = {
 //     return res
 // }
 
+
 type TracksPerRegion = {[region: Region]: Track[]}
 type TopGenresPerRegion = {[region: Region]: GenreName[]}
 
 const MapWrapper = () => {
-    const [regions, setRegions] = useState<RegionGeometry[]>([])
-    const [tracksPerRegion, setTracksPerRegion] = useState<TracksPerRegion>(undefined)
-    const [topGenresPerRegion, setTopGenresPerRegion] = useState<TopGenresPerRegion>(undefined)
+    const { data: regions, isLoading: isRegionsLoading } = useFetch('/country/all')
+    const { data: genres, isLoading: isGenresLoading } = useFetch('/genres')
 
-    useEffect( () => {
-        fetch('http://localhost:9000/country/all')
-            .then( res => res.json() )
-            .then( res => {
-                console.log(res);
-                setRegions(res)
-            } )
-
-        fetch('http://localhost:9000/genres')
-            .then( res => res.json() )
-            .then( ( { topGenresPerRegion, tracksPerRegion } ) => {
-
-                console.log(topGenresPerRegion);
-                console.log(tracksPerRegion);
-                
-                setTracksPerRegion(tracksPerRegion)
-                setTopGenresPerRegion(topGenresPerRegion)
-            } )
-    }, [] )
-
-
-    
     return (
         <MapContainer 
             {...mapOptions}
@@ -101,9 +82,10 @@ const MapWrapper = () => {
                 // url='https://stamen-tiles-{s}.a.ssl.fastly.net/terrain-background/{z}/{x}/{y}{r}.png'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            { regions.length > 0 && tracksPerRegion !== undefined && topGenresPerRegion !== undefined && regions.map( ([regionName, geometry], i) => {
-                const tracks = tracksPerRegion[regionName] || []
-                const topGenres = topGenresPerRegion[regionName] || []
+            <Navbar />
+            { !isRegionsLoading && !isGenresLoading && regions.map( ([regionName, geometry], i) => {
+                const tracks = genres.tracksPerRegion[regionName] || []
+                const topGenres = genres.topGenresPerRegion[regionName] || []
                 const topGenre = topGenres && topGenres[0]
                 const color = palette[topGenre] || 'white'
                 return <GeoJSON key={`country-${i}`} style={{fillColor: color, color, weight: 1}} data={JSON.parse(geometry)}>
