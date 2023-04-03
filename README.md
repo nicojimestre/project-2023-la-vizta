@@ -53,7 +53,7 @@ More concretely, we would like to display a map of the world. Data could be show
 > - Show some basic statistics and get insights about the data
 
 ###### Spotify Charts
-"Top200" and "Viral50" charts are refreshed every 2-3 days and data has been collected since 2017 summing it up to around 2.3GB of data. 
+"Top200" and "Viral50" charts are refreshed every 2-3 days and data has been collected since 2017 summing it up to around 3.5GB of data. 
 
 Each row contains: (title, rank, date, artists, url, region, chart, trend, streams)
 The “chart” column is for the ‘top200’ (=200 most streamed song) and ‘viral50’ (=TODO)
