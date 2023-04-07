@@ -80,7 +80,9 @@ We are taking an original approach because we are integrating multiple datasets 
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
 
 We looked specially at maps because we wanted to have something by countries. We used the following two data maps as examples for our project.
+
 https://public.tableau.com/app/profile/andr.oliveira8781/viz/Banksy/Home
+
 http://www.puffpuffproject.com/languages.html
 
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
