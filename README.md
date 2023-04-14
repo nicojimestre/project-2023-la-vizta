@@ -59,6 +59,7 @@ Moreover, we would like to add ... (filter)
 "Top200" and "Viral50" charts are refreshed every 2-3 days and data has been collected since 2017 summing it up to around 3.5GB of data. 
 
 Each row contains: (title, rank, date, artists, url, region, chart, trend, streams)
+
 We are going to focus only on:
 - The "title": title of the music ( waka waka )
 - The "rank": the rank of the song between the top200 or viral50
