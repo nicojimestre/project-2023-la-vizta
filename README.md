@@ -70,7 +70,6 @@ We are going to focus only on:
 
 
 Virality is mesure with the streams, the saves in playlist, shares and time listened on a timeframe given (1 day, 1 week ...)
-Our focus will mostly be on the region (=country) and streams.
 Number of rows in the dataset: XX
 Number of countries represented: 69 + “global” (world)
 
