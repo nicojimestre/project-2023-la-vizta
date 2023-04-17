@@ -4,7 +4,7 @@
 | --------------  | ------ |
 | Nathan Maire    | 313202 |
 | Edouard Lacroix | 313192 |
-| Nicolas Jimenez | XXXXXX |
+| Nicolas Jimenez | 283057 |
 
 [Milestone 1](#milestone-1) • [Milestone 2](#milestone-2) • [Milestone 3](#milestone-3)
 
@@ -73,14 +73,33 @@ Virality is mesure with the streams, the saves in playlist, shares and time list
 Number of rows in the dataset: XX
 Number of countries represented: 69 + “global” (world)
 
-
 ### Related work
 
 
 > - What others have already done with the data?
+
+We saw that multiple other projects were done with this spotify dataset. The three we looked at were from the kaggle database. 
+The first one is a simple exloratory data analysis where they try to understand the key informations about the dataset, such as . 
+https://www.kaggle.com/code/dhruvildave/spotify-charts-exploratory-data-analysis
+The second project aims to understand when christmas begins at each year. They try to understand which country have the biggest "christmas spirit" by looking at the evolution of the song "All I want for christams is you". 
+https://www.kaggle.com/code/ewoudb95/exploring-christmas-spirit-across-the-world
+In this third project, they check how Taylor Swift has been performing over the last years by looking at her viral songs and how many times she was in the top charts. To perform this analysis, they use spark which enables them to treat huge data amounts more efficiently. 
+https://www.kaggle.com/code/aneridalwadi/exploratory-data-analysis-taylor-swift/notebook
+
 > - Why is your approach original?
+
+We are taking an original approach because we are integrating multiple datasets such as the Shazam one to add key information on the charts that is not present in the Spotify dataset. Furthermore, our visualisation is very different from them since we are integrating a map. Finally, our goal is not just to give raw information to the user but in an interactive way.
+
 > - What source of inspiration do you take? Visualizations that you found on other websites or magazines (might be unrelated to your data).
+
+We looked specially at maps because we wanted to have something visual divided by countries. We used the following two data maps as examples for our project.
+
+https://public.tableau.com/app/profile/andr.oliveira8781/viz/Banksy/Home
+
+http://www.puffpuffproject.com/languages.html
+
 > - In case you are using a dataset that you have already explored in another context (ML or ADA course, semester project...), you are required to share the report of that work to outline the differences with the submission for this class.
+
 
 ## Milestone 2 (7th May, 5pm)
 
